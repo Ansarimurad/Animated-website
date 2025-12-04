@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="hero">
+        <video autoplay muted loop class="video-bg">
+            <source src="images/video.mp4" type="video/mp4">
+           </video>
         <div class="nav">
             <img src="images/logo.png" class="logo">
             <button type="button">Sign-up</button>
@@ -16,7 +19,8 @@
             <h4>Welcome to Our </h4>
             <h1>Amazing <br> Creative Platform</h1>
             <p>Join us to explore a world of opportunities and connect with like-minded individuals.</p>
-            <button type="button">Take a tour</button>
+            <button type="button" onclick="openProjects()">Take a tour</button>
+
            
         </div>
         <div class="side-bar">
@@ -46,5 +50,38 @@
     <img src="images/bubble.png" >
 </div>
  </div>
+ <!-- Project Popup Modal -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProjects()">&times;</span>
+
+        <h2>My Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">Project 1</div>
+            <div class="project-card">Project 2</div>
+            <div class="project-card">Project 3</div>
+            <div class="project-card">Project 4</div>
+        </div>
+    </div>
+</div>
+<script>
+function openProjects() {
+    document.getElementById("projectModal").style.display = "flex";
+}
+
+function closeProjects() {
+    document.getElementById("projectModal").style.display = "none";
+}
+
+// Close when clicking outside the box
+window.onclick = function(event) {
+    let modal = document.getElementById("projectModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 </body>
 </html>
