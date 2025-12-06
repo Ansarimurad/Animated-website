@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  font-style: italic;
+    background-color: #11212d;
+color: aliceblue;
+line-height: 1.6;
+  padding: 20px;
+}
+#nav{
+  
+  background-color: #06141b;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  gap: 10px;
+  text-align: center;
+  color: wheat;
+  font-size: 26px;
+  font-style: italic;
+  box-shadow: 0 4px 10px rgba(0, 183, 255, 0.3);
+}
+@media (max-width: 768px) {
+   #nav {
+      width: 90%;
+      margin: 50px auto; /* Center kar mobile me */
+    }
+  }
+
+#nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-bottom: none; /* extra precaution */
+}
+
+#nav a:hover {
+  color: #e4470d; /* custom hover color */
+  text-decoration: underline; /* optional if you want hover underline */
+}
+#section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+ h2{
+  color: #ff0000;
+ }   
+  #About  {
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;      /* Corner gol */
+    box-shadow: 0 4px 10px rgba(0, 183, 255, 0.3);
+flex: 1;
+min-width: 350px;
+max-width: 400px; 
+height: 450px;
+  }
+  
+  
+  /* Responsive (Mobile ke liye) */
+  @media (max-width: 768px) {
+    .about-section {
+      width: 90%;
+      margin: 50px auto; /* Center kar mobile me */
+    }
+  }
+  
+  .Contact{
+    background-color:#11212d;
+
+  }
+  
+  .social-links{
+    display: flex ;
+    gap: 10px;
+    background-color:#11212d;
+    font-size: 1rem;
+  }
+  .link-box{
+    background-color: rgb(187, 181, 181);
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+
+  }
+  .link-box i{
+    font-size: 20px;
+     color: rgb(225, 7, 7); 
+
+  }
+  .link-box:hover{
+    background-color:#11212d;
+  }
+.Project {
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    flex: 2;
+  /* padding: 10px ; */
+  box-sizing: 30px;
+    }
+    
+    .Project-card {
+    
+    background-color: #111;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 183, 255, 0.3);
+    transition: transform 0.3s ease;
+    }
+    
+    .Project-card:hover {
+      background-color: #fff;
+      color: #000;
+    transform: scale(1.05);
+    }
+    
+    .Project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #ff0000;
+    }
+    
+    #section {
+        display: flex;
+        justify-content: space-between;
+        gap: 4px;
+        /* padding: 4px; */
+        flex-wrap: wrap; /* Optional: responsive ke liye */
+        margin-bottom: 4px;
+      }
+      
+        footer {
+          text-align: center;
+          margin-top: 30px;
+          font-size: 14px;
+          color: #ccc;
+        }
+        
+      .avtar-container {
+         position: fixed;
+          display: flex;
+          align-items: center; */
+          justify-content : flex;/* Right side align karne ke liye*/
+          gap: 3px;
+      margin-top: 50px;
+      /* top: 350px; */
+      } 
+       model-viewer{
+        height: 500px;
+        width: 500px;
+     left:1000px;
+     bottom: 500px;
+       }
+       
+

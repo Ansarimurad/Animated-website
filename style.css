@@ -10,7 +10,9 @@
     background-position: center;
     position: relative; 
     overflow: hidden;
+    
 }
+
 .video-bg{
     position: absolute;
     top: 0;
@@ -59,6 +61,40 @@ h1{
     line-height: 80px;
 
 }
+.side-nav {
+    height: 100%;
+    width: -20px;
+    position: fixed;
+    top: 0;
+    right: 0; /* left side se slide in */
+    background-color:rgb(210 76 76 / 10%);;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+.side-nav a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    color: #fff;
+}
+
 .side-bar{
     width: 50px;
     height: 100vh;
@@ -68,12 +104,19 @@ h1{
     top: 0;
     
 }
-.menu{
+.menu {
     display: block;
-    width: 15px;
-    margin: 40px 0 auto;
+    width: 25px;
+    position: absolute;
+    top: 60px;
+    right: 40px;
     cursor: pointer;
+    transition: 0.3s;
+  
+
+
 }
+
 .social-links, .useful-links{
 width: 25px;
 margin: 5px 0 auto;
@@ -90,7 +133,8 @@ cursor: pointer;
 .useful-links{
     width: 50%;
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
+    left: 100px;
     transform: translateX(-50%);
 }
 .bubble img{
@@ -163,8 +207,8 @@ cursor: pointer;
 
 /* Popup Box */
 .modal-content {
-    background: white;
-    width: 60%;
+    background: rgb(230, 232, 234);
+    width: 70%;
     padding: 30px;
     border-radius: 15px;
     animation: fadeIn 0.4s ease;
@@ -192,20 +236,149 @@ cursor: pointer;
 
 .project-card {
     background: #f3f3f3;
+   
     padding: 20px;
     border-radius: 12px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     transition: 0.3s ease;
     cursor: pointer;
 }
 
 .project-card:hover {
-    background: #e5e5e5;
+    background: #127bb09b;
     transform: translateY(-5px);
 }
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+.project-card a{
+    text-decoration: none;
+    color: inherit;
+}
+/* =============================
+      RESPONSIVE MEDIA QUERIES
+   ============================= */
+
+/* 📱 Mobile (0px – 600px) */
+@media (max-width: 600px) {
+
+    .nav {
+        width: 90%;
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .menu {
+        width: 22px;
+        top: 25px;
+        right: 25px;
+        filter: brightness(0.5);
+    }
+
+    .content {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    .content h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .side-nav {
+        width: 0;
+        padding-top: 40px;
+    }
+
+    .social-links {
+        width: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 38%;
+    }
+
+    .useful-links {
+        width: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 40px;
+    }
+
+    .bubble img {
+        width: 35px;
+    }
+}
+
+
+/* 📱💻 Tablet / Small Laptops (600px – 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .menu {
+        width: 25px;
+        top: 30px;
+        right: 35px;
+        filter: brightness(0.5);
+    }
+
+    .content {
+        left: 30%;
+        width: 55%;
+    }
+
+    .content h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .social-links {
+        width: 50%;
+        left: 40%;
+    }
+
+    .useful-links {
+        width: 50%;
+        left: 40%;
+    }
+
+    .bubble img {
+        width: 50px;
+    }
+}
+
+
+/* 🖥️ Desktop (1024px +) */
+@media (min-width: 1024px) {
+
+    .menu {
+        width: 28px;
+        top: 40px;
+        right: 50px;
+    }
+
+    .content {
+        left: 25%;
+        width: 50%;
+    }
+
+    .content h1 {
+        font-size: 65px;
+        line-height: 82px;
+    }
+
+    .bubble img {
+        width: 60px;
     }
 }

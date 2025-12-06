@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+  
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+<body>
+  
+   <div id="nav"> 
+   
+  <h4><a href="#Home">Home</a></li></h4> 
+<h4><a href="#About">About</a></li></h4>
+<h4><a href="#Project">Project</a></li></h4>
+<h4><a href="#Contact">Contact</a></li></h4>
+<h4><a href="#" onclick="toggleDarkMode()">Toggle Mode</a></li></h4>
+  </ul>
+</nav>  <section id="intro" class="intro">
+  </section>
+</div>
+
+<div id="About">
+    <h2>About Me</h2>
+    <p>Myself <strong style="color:#ff4444;">Murad Ansari</strong>, a passionate and self-motivated <strong style="color:#ff4444;">Web Developer</strong>.</p>
+      <p>Currently pursuing B.Sc IT from Dr. Babasaheb Ambedkar College Mahad.</p>
+      <p>I enjoy creating responsive and user-friendly websites. I'm a quick learner and a team player.</p>
+      <br><h3>Skills:</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Git, GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </div>
+   <model-viewer src ="Untitled.glb"alt="3D Avatar" 
+        auto-rotate 
+        autoplay
+        camera-controls 
+        ar 
+        ar-modes="webxr scene-viewer quick-look">
+  </model-viewer>
+    </div>
+<section id="Project" class="Project">
+    <h2>Project :-</h2>
+    <div class="Project-card">
+      <h3>Login page</h3>
+      <p>Responsive login form using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="Project-card">
+      <h3>Photo Gallery</h3>
+      <p>A responsive photo gallery layout using HTML, CSS Grid/Flexbox, and JavaScript for lightbox or image preview effects.</p></a>
+    </div>
+    <div class="Project-card">
+      <h3>AI Portfolio Generator</h3>
+      <p>Generate portfolios like this using AI — stylish, responsive, and fully customizable.</p>
+    </div>
+    </section>
+    <section id = "Contact" class ="Contact">
+      
+<h2>Contact</h2>
+<div class="contact">Contact me</div>
+<p>Want to collaborate? Reach out:</p>
+    <p>Email: <strong style="color:#ff4444;">ansarimurad24@gmail.com</strong></p>
+    </section>
+    <div class="social-links">
+        <a href="https://github.com/Ansarimurad" class="link-box" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+            <a href="https://www.instagram.com/btw__murad/" class="link-box">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/murad-ansari-0a9570351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="link-box">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+    </div> <footer>
+        &copy; 2025 murad Ansari. All rights reserved.
+      </footer>  <script>
+        
+        var tl= gsap.timeline()
+        tl.from("h4" ,{
+          y:-20,
+          duration:1,
+    delay:0.5,
+    stagger:0.3,
+        })
+        function toggleDarkMode() {
+          document.body.classList.toggle("light-mode");
+          if (document.body.classList.contains("light-mode")) {
+            document.body.style.backgroundColor = "#fff";
+            document.body.style.color = "#000";
+          } else {
+            document.body.style.backgroundColor = "#11212d";
+            document.body.style.color = "#fff";
+          }
+        } 
+        const aboutElement = document.getElementById('About');
+const projectElement = document.getElementById('Project');
+
+if (!aboutElement || !projectElement) {
+  const data = { error: "Could not find elements with IDs 'About' or 'Project'." };
+} else {
+  const aboutComputedStyles = window.getComputedStyle(aboutElement);
+  const navComputedStyles = window.getComputedStyle(navElement);
+  const projectComputedStyles = window.getComputedStyle(projectElement);
+  const bodyComputedStyles = window.getComputedStyle(document.body);
+
+  const data = {
+    aboutStyles: {
+      marginTop: aboutComputedStyles.marginTop,
+      marginBottom: aboutComputedStyles.marginBottom,
+      paddingTop: aboutComputedStyles.paddingTop,
+      paddingBottom: aboutComputedStyles.paddingBottom,
+      display: aboutComputedStyles.display,
+    },
+    projectStyles: {
+      marginTop: projectComputedStyles.marginTop,
+      marginBottom: projectComputedStyles.marginBottom,
+      paddingTop: projectComputedStyles.paddingTop,
+      paddingBottom: projectComputedStyles.paddingBottom,
+      display: projectComputedStyles.display,
+    },
+    bodyStyles: {
+      display: bodyComputedStyles.display,
+      gap: bodyComputedStyles.gap,
+    }
+  };
+}
+    </script>
+</body>
+
+</html>
